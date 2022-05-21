@@ -20,7 +20,11 @@ const ProductCard: React.FC<IProduct> = (data) => {
       <Image src={data.products.image} alt={data.products.image} />
       <ContainerDescription>
         <Title>{data.products.title}</Title>
-        <Price>R${data.products.price.replace("undefined", "00")}</Price>
+        <Price>
+          {data.products.price.includes(",")
+            ? data.products.price.replace(/\n/g, "")
+            : `${data.products.price.replace("\n", "")},00`}
+        </Price>
       </ContainerDescription>
     </ContainerProductCard>
   );
