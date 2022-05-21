@@ -1,4 +1,10 @@
-import { ContainerProductCard, Image } from "./styles";
+import {
+  ContainerProductCard,
+  Image,
+  Title,
+  Price,
+  ContainerDescription,
+} from "./styles";
 
 interface IProduct {
   products: {
@@ -12,7 +18,10 @@ const ProductCard: React.FC<IProduct> = (data) => {
   return (
     <ContainerProductCard>
       <Image src={data.products.image} alt={data.products.image} />
-      <p>{data.products.title}</p>
+      <ContainerDescription>
+        <Title>{data.products.title}</Title>
+        <Price>R${data.products.price.replace("undefined", "00")}</Price>
+      </ContainerDescription>
     </ContainerProductCard>
   );
 };
