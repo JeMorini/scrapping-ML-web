@@ -23,10 +23,16 @@ export const Button = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 20%;
+  width: 150px;
   height: 50px;
-  background-color: purple;
+  background-color: #f7d032;
   cursor: pointer;
   padding: 4px;
   border-radius: 5px;
+`;
+
+export const Logo = styled.img`
+  height: 130px;
+  width: 170px;
+  margin: 15px 0px;
 `;

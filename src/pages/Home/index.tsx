@@ -1,7 +1,7 @@
-import api from "../../services/api.ts";
+import api from "../../services/api";
 import { useEffect, useState } from "react";
-import { Image, Input, ContainerInput, Button } from "./styles";
-import ProductCard from "../../components/ProductCard/index.tsx";
+import { Image, Input, ContainerInput, Button, Logo } from "./styles";
+import ProductCard from "../../components/ProductCard";
 import "../../App.css";
 import ReactLoading from "react-loading";
 
@@ -33,6 +33,7 @@ const Home: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
+        <Logo src="https://logodownload.org/wp-content/uploads/2016/08/mercado-livre-logo-1-1.png" />
         <ContainerInput>
           <Input onChange={(value) => setInputProduct(value.target.value)} />
           <Button onClick={search}>
